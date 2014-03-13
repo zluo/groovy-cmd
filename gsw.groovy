@@ -1,10 +1,17 @@
 #!/usr/bin/env groovy
+def data=".gswlist"
 boolean  verbose=false;
 if (args) {
 	args.each{ run(it) }
 }
 else {
-	new File(".gswlist").eachLine{run(it)}
+	def cmd_home=System.getenv().get("GROOVY_CMD_HOME");
+	println cmd_home
+	if (cmd_home !=null)
+	{
+		data=cmd_home + "/" + data
+	}
+	new File(data).eachLine{run(it)}
 }
 
 def run(String ticker)
