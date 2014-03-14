@@ -12,7 +12,7 @@ g.cmd			grep english vocabulary
 
 gsw.groovy		List stock quotes using google finance url
 sw.groovy       List stock ticker using netfonts url
+
 -----------------------------------------------------------------------
-dl.groovy       List directory history , default history file .dirlist
-_pdl.groovy     	Push list, save current directory to .dirlist
-d
+ld.groovy       List directory history , default history file .dirlist
+pd.groovy     	Push list, save current directory to .dirlist
