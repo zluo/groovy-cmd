@@ -19,20 +19,15 @@ if (args) {
 	result.sort{-it.value}.eachWithIndex{key,value,index ->
 	  if (Integer.valueOf(args[0])==index)
 	  {
-		  def f= new File(".ld.cmd")
-		  f.write("cd $key")
+		  curDir=key
 		  return;
 	  }
 	}
 }
-else {
-	try {
-	}
-	catch(Throwable e) {
-	}
-
+else
+{
 result.sort{-it.value}.eachWithIndex {key, value, index -> println "$index. $key, $value"}
+}
+
 def f= new File(".ld.cmd")
 f.write("cd $curDir")
-return;
-}
