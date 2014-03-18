@@ -1,10 +1,15 @@
 #!/usr/bin/env groovy
-boolean  verbose=false;
+def data=".curlist"
 if (args) {
 	args.each{ run(it) }
 }
 else {
-	new File(".curlist").eachLine{run(it)}
+	def cmd_home=System.getenv().get("GROOVY_CMD_HOME");
+	if (cmd_home !=null)
+	{
+		data=cmd_home + "/" + data
+	}
+	new File(data).eachLine{run(it)}
 }
 
 def run(String ticker)

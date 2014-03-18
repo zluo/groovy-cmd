@@ -6,7 +6,6 @@ if (args) {
 }
 else {
 	def cmd_home=System.getenv().get("GROOVY_CMD_HOME");
-	println cmd_home
 	if (cmd_home !=null)
 	{
 		data=cmd_home + "/" + data
