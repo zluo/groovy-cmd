@@ -79,7 +79,7 @@ class DirtoryImpl {
 			if (cmd_home !=null) {
 				dataFile=cmd_home + "/" + dataFile
 			}
-			result=slurper.parseText(new File(dataFile).getText())
+			result=slurper.parseText(new File(dataFile).getText()).sort{-it.value}
 		}
 		catch(Throwable e) {
 			println e
