@@ -1,8 +1,15 @@
+ls
 Repository for Groovy Command Line tools
 
 Premise:
 -----------------------------------------------------------------------
 set up %GROOVY-CMD% Home directory 
+
+Common:
+-----------------------------------------------------------------------
+m.groovy        	Memorize the input parameter, and allow parameter to 
+					be edited.
+					Can be used by many other functions, 
 
 
 Dictionary
@@ -19,8 +26,7 @@ Stocks
 -----------------------------------------------------------------------
 gsw.groovy		List stock quotes using google finance url
 sw.groovy       List stock ticker using netfonts url
-
-
+yf.groovy  		Edit stock symbols, Yahoo Finance 
 
 Push/List/Remove/Change Directory
 -----------------------------------------------------------------------
