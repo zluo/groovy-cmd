@@ -1,0 +1,6 @@
+*.class
+/.diclist
+/.entry
+/.stocklist
+/t
+/t.cmd
