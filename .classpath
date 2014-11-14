@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Groovy/Groovy-2.2.2/lib/http-builder-0.7.1-20140225.171857-1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

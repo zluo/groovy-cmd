@@ -1,8 +1,9 @@
 #!/usr/bin/env groovy
 def data=".gswlist"
 boolean  verbose=false;
+"cmd /c dir.cmd".execute()
 if (args) {
-	args.each{ run(it) }
+	args.each{ run(it.toUpperCase()) }
 }
 else {
 	def cmd_home=System.getenv().get("GROOVY_CMD_HOME");
@@ -13,9 +14,16 @@ else {
 	new File(data).eachLine{run(it)}
 }
 
+"cmd /c dir.cmd".execute()
+
 def run(String ticker)
 {
+    try{
 	formatGoogleSimpleResult(download("http://www.google.com/finance/getprices?i=60&p=1d&f=d,o,h,l,c,v&df=cpct&q=${ticker}"), ticker)
+	}
+	catch(Throwable e){
+	println "[$ticker] can't find price"
+	}
 }
 
 
@@ -58,6 +66,9 @@ def formatGoogleSimpleResult(data, ticker) {
 	
 	def time =new Date((startTime + currentTime)).format("yyyy-M-d hh:mm")
 	println """[${time}][${ticker}]${close}@${(volumn/1000000).round(1)}m (${(close - open).round(2)}/${(((close-open)/close)*100).round(2)}% ${open}|${low}|${high}) """
+	
+	
+	
 }
 
 

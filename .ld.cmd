@@ -1,1 +1,1 @@
-cd C:\src\esl
+cd C:\groovy-cmd

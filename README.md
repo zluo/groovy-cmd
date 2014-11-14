@@ -1,4 +1,3 @@
-ls
 Repository for Groovy Command Line tools
 
 Premise:
@@ -41,3 +40,12 @@ ld.cmd          List Directory History, without parameter, list Directory Histor
 				
 gld.groovy      Groovy List directory history , default history file .dirlist
 pd.groovy     	Push list, save current directory to .dirlist
+
+Replace a line of properties file
+-----------------------------------------------------------------------
+rp.cmd  %1 %2 %3
+
+rp.groovy fileName attribute value
+
+
+

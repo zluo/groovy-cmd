@@ -1,2 +1,1 @@
-println "xx"
-return "xx"
+println 'Hello world'
